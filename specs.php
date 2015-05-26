@@ -13,7 +13,7 @@
  *	we need to inject/replace with live data.
  *
  *	The main point is to stay with pure html content for:
- *  	1. Passing HTML validation 
+ *   	1. Passing HTML validation 
  *		 2. Browser can show the template to the client (with some 'lorem ipsum'), no server needed.
  *		 3. Front-end designer knows about "reserved markup", but focused anly on html, css and js.
  *			 (without the server, the template just another HTML Template. 
@@ -22,7 +22,7 @@
  *		 5. IDE/WYSIWYG editor, that can understand specific "reserved markup", can generate customized dynamic template blocks/widgets.
  *
  *	To be discuss:
- *		 1. Find middle between "reserved markup" and "rendering instructions".
+ *		  1. Find middle between "reserved markup" and "rendering instructions".
  *			"reserved markup" - The template includes all the instructions for rendering.
  *			"instructions for rendering" - How the data needs to be binded. may be included in render controller.
  *   2. Do we need Controller Class(data, instructions) to all templates block?
