@@ -10,7 +10,7 @@
  *
  * 	The view is a pure html template
  *	with reserved anchors in places, where
- *	we need to inject/replace live data.
+ *	we need to inject/replace with live data.
  *
  *	The main point is to stay with pure html content for:
  *  	1. Passing HTML validation 
@@ -27,6 +27,9 @@
  *			"instructions for rendering" - How the data needs to be binded. may be included in render controller.
  *      2. Do we need Controller Class(data, instructions) to all templates block?
  *		3. Performance issue: time/memory(parsing, binding) and functionality(user interface for designer/developers). (Can be not usefull)
+ *  4. Maybe it's combination of 
+ *   AngularJS (@see https://docs.angularjs.org/guide/templates) and 
+ *   TAL (@see http://en.wikipedia.org/wiki/Template_Attribute_Language)
  *
  **/
 
@@ -149,7 +152,8 @@
 
   }
 
-  // 
+  // Because data-model is instance of ListViewController the template will render from all items (loop)
+  // If data-model is instance of BaseViewController the view will rendered as one item
   $view = new \Insite\Engine\Templater\Templater($html_template2);
   $html_live = $view->fetch(); 
   echo $html_live;
